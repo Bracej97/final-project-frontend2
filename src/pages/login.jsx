@@ -25,9 +25,7 @@ function Login() {
             console.log(response.data.status)
 
             if (response.data.status) {
-                console.log("I can get to here")
                 loginUser(userName)
-                console.log("can i get to here")
                 console.log(response.data, "Login clicked")
 
                 localStorage.setItem('authToken', response.data.data.token);

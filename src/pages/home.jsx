@@ -1,9 +1,10 @@
 //Home Page
-import React from "react";
+import React, { useContext } from "react";
 import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import data from '../mock/user-mock.json';
+import { UserContext } from "../contexts/UserCOntext";
 
     //get json data
     // read it and look at id number and name
@@ -11,6 +12,7 @@ import data from '../mock/user-mock.json';
 
 function Home(){
     const [name, setName] = useState('');
+    const { user } = useContext(UserContext)
 
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredResults, setFilteredResults] = useState([])
@@ -30,7 +32,7 @@ function Home(){
             <div className="card-holder">
                 <div className="card">
                     <h2>
-                        Hello {name}
+                        Hello {user.username}
                     </h2>
                 </div>
                 <div className="card">
