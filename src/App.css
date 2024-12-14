@@ -51,6 +51,10 @@
   color: #888;
 }
 
+li{
+  list-style: none;
+}
+
 
 .card-holder{
   display: flex;
