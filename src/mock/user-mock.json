@@ -1,0 +1,14 @@
+[
+    {"id": "1", "name": "John Smith", "course-enrolled": "Computer Science"},
+    {"id": "2", "name": "Alice Johnson", "course-enrolled": "Psychology"},
+    {"id": "3", "name": "Emily Brown", "course-enrolled": "English Literature"},
+    {"id": "4", "name": "Chris Green", "course-enrolled": "Mechanical Engineering"},
+    {"id": "5", "name": "Laura Wilson", "course-enrolled": "Biochemistry"},
+    {"id": "6", "name": "David Turner", "course-enrolled": "Economics"},
+    {"id": "7", "name": "Sophie Carter", "course-enrolled": "History"},
+    {"id": "8", "name": "Michael Davis", "course-enrolled": "Mathematics"},
+    {"id": "9", "name": "Olivia Moore", "course-enrolled": "Fine Arts"},
+    {"id": "10", "name": "Daniel Evans", "course-enrolled": "Political Science"},
+    {"id": "11", "name": "Jessica White", "course-enrolled": "Philosophy"},
+    {"id": "12", "name": "James Harris", "course-enrolled": "Environmental Science"}
+  ]

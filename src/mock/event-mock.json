@@ -1,0 +1,14 @@
+[
+    {"id": "1", "name": "Art Exhibition", "person": "John Smith", "date": "2024-01-15", "location": "Tate Modern, London"},
+    {"id": "2", "name": "Tech Conference", "person": "Alice Johnson", "date": "2024-02-20", "location": "ExCeL London"},
+    {"id": "3", "name": "Book Launch", "person": "Emily Brown", "date": "2024-03-05", "location": "Waterstones Piccadilly"},
+    {"id": "4", "name": "Music Festival", "person": "Chris Green", "date": "2024-04-10", "location": "Hyde Park"},
+    {"id": "5", "name": "Charity Run", "person": "Laura Wilson", "date": "2024-05-25", "location": "Regent's Park"},
+    {"id": "6", "name": "Film Premiere", "person": "David Turner", "date": "2024-06-15", "location": "Odeon Leicester Square"},
+    {"id": "7", "name": "Food Fair", "person": "Sophie Carter", "date": "2024-07-20", "location": "Borough Market"},
+    {"id": "8", "name": "Science Workshop", "person": "Michael Davis", "date": "2024-08-12", "location": "Science Museum, London"},
+    {"id": "9", "name": "Fashion Show", "person": "Olivia Moore", "date": "2024-09-08", "location": "Somerset House"},
+    {"id": "10", "name": "Comedy Night", "person": "Daniel Evans", "date": "2024-10-18", "location": "The Comedy Store, Soho"},
+    {"id": "11", "name": "Photography Meetup", "person": "Jessica White", "date": "2024-11-05", "location": "Shoreditch"},
+    {"id": "12", "name": "Startup Pitch Night", "person": "James Harris", "date": "2024-12-03", "location": "Google Campus, London"}
+  ]
