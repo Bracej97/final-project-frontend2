@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { UserContext } from '../contexts/UserCOntext';
+import { UserContext } from 'src/contexts/UserContext';
 import { useNavigate } from 'react-router-dom';
 import api from '../api/axios';
 import Card from '@mui/material/Card';
