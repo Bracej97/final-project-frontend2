@@ -8,7 +8,7 @@ import Events from './pages/events'
 import Error from './pages/error'
 import Login from './pages/login'
 import Signup from './pages/signup'
-import { UserProvider } from 'src/contexts/UserContext'
+import { UserProvider } from './contexts/UserContext'
 
 
 

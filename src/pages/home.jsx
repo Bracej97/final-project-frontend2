@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import data from '../mock/user-mock.json';
-import { UserContext } from "../contexts/UserCOntext";
+import { UserContext } from "../contexts/UserContext";
 
     //get json data
     // read it and look at id number and name
