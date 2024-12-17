@@ -10,3 +10,5 @@ export const EventsList = (events, onLike, onAddToCalendar) => {
         </div>
     `).join('');
 };
+
+export default EventsList

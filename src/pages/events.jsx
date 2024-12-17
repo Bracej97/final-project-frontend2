@@ -1,6 +1,6 @@
 //Event page
 import React from "react";
-import { fetchEvents } from '../events/EventsList.js';
+import { fetchEvents } from '../events/EventsAPI.js';
 import { EventsList } from '../events/EventsList.js';
 
 function Events() {
@@ -43,7 +43,7 @@ function Events() {
 
     <div id="events-page">
         <h1>Explore Events</h1>
-        <div class="controls">
+        <div className="controls">
             <input type="text" id="search-events" placeholder="Search events..." />
             <select id="category-filter">
                 <option value="all">All Categories</option>

@@ -10,3 +10,5 @@ export const fetchEvents = async (category = "all") => {
         return [];
     }
 };
+
+export default fetchEvents;
