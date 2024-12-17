@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="./src/events/EventsPage.css">
+</head>
+<body>
+    <div id="events-page">
+        <h1>Explore Events</h1>
+        <div className="controls">
+            <input type="text" id="search-events" placeholder="Search events..." />
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="academic">Academic</option>
+                <option value="social">Social</option>
+                <option value="sports">Sports</option>
+            </select>
+        </div>
+        <div id="events-container"></div>
+    </div>
+    <script type="module" src="./src/events/EventsPage.js"></script>
+</body>
+</html>
