@@ -36,13 +36,21 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  gap:20px;
 }
 
 .Question{
-  margin: 20px;
+  margin: auto;
   text-align: center;
   width:350px;
+  box-sizing: border-box;
 } 
+
+.Question.open{
+  margin:20px;
+  width:350px;
+}
+
 
 .FAQ-question{
   text-align: center;
