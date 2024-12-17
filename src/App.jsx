@@ -9,6 +9,8 @@ import Error from './pages/error'
 import Login from './pages/login'
 import Signup from './pages/signup'
 import { UserProvider } from './contexts/UserContext'
+import Header from './components/Header'
+
 
 
 
@@ -17,6 +19,7 @@ function App() {
     <>
     <UserProvider>
       <Router>
+        <Header />
         <div>
           <nav>
             <ul className="sidebar">
