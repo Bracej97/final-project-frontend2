@@ -32,7 +32,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-**/.Questions{
+.Questions{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
