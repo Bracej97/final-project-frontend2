@@ -1,0 +1,15 @@
+[
+    {"id": "1", "name": "What is the refund policy?", "content": "Refunds are available within 30 days of purchase with proof of receipt."},
+    {"id": "2", "name": "How can I reset my password?", "content": "To reset your password, click on 'Forgot Password' at the login page and follow the instructions."},
+    {"id": "3", "name": "What payment methods are accepted?", "content": "We accept credit/debit cards, PayPal, and bank transfers."},
+    {"id": "4", "name": "How do I track my order?", "content": "You can track your order through the 'Order History' section of your account."},
+    {"id": "5", "name": "Is there a warranty on products?", "content": "Yes, all products come with a 12-month warranty."},
+    {"id": "6", "name": "Can I change my shipping address?", "content": "Yes, you can change your shipping address before the order is dispatched."},
+    {"id": "7", "name": "Do you offer international shipping?", "content": "Yes, we ship to most countries worldwide."},
+    {"id": "8", "name": "How do I contact customer support?", "content": "You can contact our support team via email or the live chat feature on our website."},
+    {"id": "9", "name": "What is the delivery time?", "content": "Delivery times vary by location but typically range from 3-7 business days."},
+    {"id": "10", "name": "Are the products environmentally friendly?", "content": "Yes, we prioritize sustainability and use eco-friendly materials whenever possible."},
+    {"id": "11", "name": "Can I cancel my subscription?", "content": "Yes, you can cancel your subscription at any time from your account settings."},
+    {"id": "12", "name": "How do I apply a discount code?", "content": "Enter your discount code at checkout in the 'Promo Code' field."}
+  ]
+  
