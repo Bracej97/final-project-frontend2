@@ -15,7 +15,7 @@ function Login() {
     const [error, setError] = useState('');
 
     const navigate = useNavigate();
-    const { user, loginUser } = useContext(UserContext)
+    const { user, loginUser } = useContext(UserContext);
 
     const onClickLogin = async (e) => {
         e.preventDefault();
@@ -33,7 +33,7 @@ function Login() {
 
                 localStorage.setItem('authToken', response.data.data.token);
 
-                navigate('/');
+                navigate('/home');
             } else {
                 setError('Could not sign in. Please try again.')
             }
