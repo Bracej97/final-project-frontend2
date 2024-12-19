@@ -17,10 +17,14 @@ import PollIcon from '@mui/icons-material/Poll';
 import HelpIcon from '@mui/icons-material/Help';
 import PersonIcon from '@mui/icons-material/Person';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../contexts/UserContext';
+import { useContext } from 'react';
 
 const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
+  const { logoutUser } = useContext(UserContext)
 
   const handleDrawerToggle = () => {
     setOpenDrawer(!openDrawer);
@@ -140,7 +144,7 @@ const Header = () => {
             onClose={handleMenuClose}
           >
             <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+            <MenuItem onClick={logoutUser()}>Logout</MenuItem>
           </Menu>
         </Toolbar>
       </AppBar>
@@ -166,46 +170,56 @@ const Header = () => {
             Navigation
           </Typography>
           <List>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <PersonIcon />
-                </ListItemIcon>
-                <ListItemText primary="Profile" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <EventIcon />
-                </ListItemIcon>
-                <ListItemText primary="Events" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <HelpIcon />
-                </ListItemIcon>
-                <ListItemText primary="FAQ" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <SettingsIcon />
-                </ListItemIcon>
-                <ListItemText primary="Settings" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <PollIcon />
-                </ListItemIcon>
-                <ListItemText primary="Quick Poll" />
-              </ListItemButton>
-            </ListItem>
+            <Link to={'/profile'}>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <PersonIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Profile" />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+            <Link to={'/events'}>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <EventIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Events" />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+            <Link to={'/faq'}>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <HelpIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="FAQ" />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+            <Link to={'/settings'}>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <SettingsIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Settings" />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+            <Link to={'/poll'}>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <PollIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Quick Poll" />
+                </ListItemButton>
+              </ListItem>
+            </Link>
           </List>
         </Box>
       </Drawer>

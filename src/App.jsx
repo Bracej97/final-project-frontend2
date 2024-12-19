@@ -22,28 +22,6 @@ function App() {
       <Router>
         <Header />
         <div>
-          <nav>
-            <ul className="sidebar">
-              <li className="nav-link">
-                <Link to='/'>Home</Link>
-              </li>
-              <li className="nav-link">
-                <Link to='/faq'>FAQ</Link>
-              </li>
-              <li className="nav-link">
-                <Link to='/profile'>Profile</Link>
-              </li>
-              <li className="nav-link">
-                <Link to='/events'>Events</Link>
-              </li>
-              <li className="nav-link">
-                <Link to='/signup'>Signup</Link>
-              </li>
-              <li className="nav-link">
-                <Link to='/login'>Login</Link>
-              </li>
-            </ul>
-          </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/faq" element={<FAQS />} />
