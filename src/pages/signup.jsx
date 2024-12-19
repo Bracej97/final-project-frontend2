@@ -5,11 +5,14 @@ import api from '../api/axios';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActions, Input, Button, Typography } from '@mui/material';
+import Banner from '../../public/Banner.png'
 
 function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [userName, setUserName] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [error, setError] = useState('');
 
     const navigate = useNavigate();
@@ -20,6 +23,8 @@ function Signup() {
         try {
             const signupRes = await api.post('AccountAPI/signup', {
                 "username": userName,
+                "first_name": firstName,
+                "last_name": lastName,
                 "email": email,
                 "password": password,
                 "password2": password
@@ -55,7 +60,15 @@ function Signup() {
                     flexDirection: 'column',
                     gap: '10px',
                 }}>
-                    <Typography variant='h5' component='div' sx={{color: '#ffffff'}}>
+                    <Box
+                        component="img"
+                        sx={{
+                        height: 64
+                        }}
+                        alt="Your logo."
+                        src={Banner}
+                    />
+                    <Typography variant='h5' component='div' sx={{color: '#aaaaaa'}}>
                         Sign up!
                     </Typography>
                     <Input
@@ -65,6 +78,20 @@ function Signup() {
                         variant="filled"
                         value={userName}
                         onChange={(e) => setUserName(e.target.value)} />
+                    <Input
+                        required
+                        placeholder='First name'
+                        label="First name"
+                        variant="filled"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)} />
+                    <Input
+                        required
+                        placeholder='Last name'
+                        label="Last name"
+                        variant="filled"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)} />
                     <Input
                         required
                         placeholder='Email address'
@@ -89,7 +116,7 @@ function Signup() {
                     <Button size='small' variant='contained' onClick={onClickSignup} style={{width: '100%'}}>
                         Sign up
                     </Button>
-                    <Typography gutterBottom variant='body1' sx={{color: '#ffffff'}}>
+                    <Typography gutterBottom variant='body1' sx={{color: '#aaaaaa'}}>
                         Already have an account?
                         <Typography
                         as="a"
