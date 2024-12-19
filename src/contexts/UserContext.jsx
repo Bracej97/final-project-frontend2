@@ -4,6 +4,8 @@ export const UserContext = createContext()
 
 const defaultUser = {
     username: '',
+    firstname: '',
+    lastname: '',
     email: '',
     password: '',
     isLoggedIn: false
@@ -11,6 +13,15 @@ const defaultUser = {
 
 export function UserProvider({ children }) {
     const [user, setUser] = useState(defaultUser);
+
+    const signupUser = (username, firstname, lastname, email) => {
+        setUser({
+            username: username,
+            firstname: firstname,
+            lastname: lastname,
+            email: email
+        });
+    }
 
     const loginUser = (username) => {
         setUser({ username: username, isLoggedIn: true });
@@ -21,7 +32,7 @@ export function UserProvider({ children }) {
     }
 
     return (
-        <UserContext.Provider value={{ user, loginUser, logoutUser }}>
+        <UserContext.Provider value={{ user, loginUser, logoutUser, signupUser }}>
             {children}
         </UserContext.Provider>
     );

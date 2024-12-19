@@ -17,7 +17,7 @@ function Signup() {
     const [error, setError] = useState('');
 
     const navigate = useNavigate();
-    const { user, loginUser } = useContext(UserContext)
+    const { user, loginUser, signupUser } = useContext(UserContext)
 
     const onClickSignup = async (e) => {
         e.preventDefault();
@@ -34,6 +34,8 @@ function Signup() {
             console.log(signupRes.data);
 
             if (signupRes.data.status) {
+                signupUser(userName, firstName, lastName, email)
+
                 const loginRes = await api.post('AccountAPI/login', {
                     "username": userName,
                     "password": password

@@ -84,7 +84,7 @@ function Home() {
       },
     }}
   >
-    Hello, {user.username}!
+    Hello, {user.first_name}!
   </Typography>
 </Box>
 
