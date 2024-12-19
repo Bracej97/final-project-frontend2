@@ -6,6 +6,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActions, Input, Button, Typography, Box } from '@mui/material';
 import { UserContext } from '../contexts/UserContext';
+import Banner from '/Banner.png'
 
 
 function Login() {
@@ -48,6 +49,14 @@ function Login() {
                     flexDirection: 'column',
                     gap: '10px',
                 }}>
+                    <Box
+                        component="img"
+                        sx={{
+                        height: 64
+                        }}
+                        alt="Your logo."
+                        src={Banner}
+                    />
                     <Typography variant='h5' component='div' sx={{color: '#aaaaaa'}}>
                         Log in!
                     </Typography>
