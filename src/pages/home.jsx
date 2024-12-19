@@ -1,95 +1,119 @@
-//Home Page
 import React, { useContext } from "react";
-import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'
-import { useParams } from "react-router-dom";
-import { useState } from "react";
-import data from '../mock/user-mock.json';
+import { Link } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
-import { Grid2, Typography, Box, Paper, CardMedia } from "@mui/material";
+import { Grid, Typography, Box, Paper, CardMedia } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-    //get json data
-    // read it and look at id number and name
-    // set name hook to name in json data
+// Custom styles for Tiles
+const Tile = styled(Paper)(({ theme }) => ({
+  backgroundColor: "#001f3f", // Navy Blue
+  color: "#FFD700", // Gold
+  textAlign: "center",
+  padding: theme.spacing(3),
+  borderRadius: "12px",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Default shadow
+  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  "&:hover": {
+    transform: "translateY(-8px) scale(1.05)", // Hover effect
+    boxShadow: "0px 12px 24px rgba(0, 0, 0, 0.4)",
+  },
+}));
 
-function Home(){
-    const [name, setName] = useState('');
-    const { user } = useContext(UserContext)
+// Banner container with background image
+const Banner = styled(Box)({
+    background: "url('../../public/Banner.png') center/cover no-repeat",
+    color: "#fff",
+    textAlign: "center",
+    padding: "80px 0", // Adjust padding as needed
+    fontSize: "2.5rem", // Font size adjustment for large screens
+    fontWeight: "bold",
+    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)", // Optional shadow for depth
+    position: "relative",
+    "@media (max-width: 600px)": {
+      fontSize: "1.5rem", // Adjust font size for mobile screens
+      padding: "60px 0",
+    },
+    "&::after": {
+      content: '""',
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: "rgba(0, 0, 0, 0.5)", // Optional semi-transparent overlay for the banner image
+      zIndex: -1,
+    },
+  });
 
-    const [searchQuery, setSearchQuery] = useState('');
-    const [filteredResults, setFilteredResults] = useState([])
-    const handleInputChange = (e) => {
-        const query = e.target.value.toLowerCase();
-        setId(query);
+// Page background style
+const Background = styled(Box)({
+  background: "linear-gradient(to bottom, #f4f4f4, #eaeaea)", // Light gradient background
+  minHeight: "100vh",
+  padding: "20px 0",
+});
 
-        const results = data.filter((item) =>
-            item.name.toLowerCase().includes(query)
-        );
-        setFilteredResults(results);
-    }
+// Tile data
+const tiles = [
+  { id: 1, title: "Profile", icon: "icon_contact.png", link: "/profile" },
+  { id: 2, title: "Events", icon: "icon_event.png", link: "/events" },
+  { id: 3, title: "FAQ", icon: "icon_faq.png", link: "/faq" },
+  { id: 4, title: "Settings", icon: "icon_settings.png", link: "/settings" },
+  { id: 5, title: "Quick Poll", icon: "icon_quick polls.png", link: "/quickpolls" },
+  { id: 6, title: "Support", icon: "icon_email.png", link: "/support" },
+];
 
-    const Item = styled(Paper)(({ theme }) => ({
-        backgroundColor: '#fff',
-        ...theme.typography.body2,
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-        ...theme.applyStyles('dark', {
-          backgroundColor: '#1A2027',
-        }),
-      }));
+function Home() {
+  const { user } = useContext(UserContext);
+  console.log(user)
 
-    return (
+  return (
+    <Background>
+      <Banner />
 
-            <Box sx={{ width: '80vw' }}>
-                <Grid2 container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-                    <Grid2 size={{xs: 4, sm: 8, md: 12}}>
-                        <Item sx={{height:'150px'}}>
-                            <h1 >Hello {user.username}</h1>
-                        </Item>
-                    </Grid2>
-                    <Grid2 size="grow">
-                        <Link to='/profile'>
-                            <Item sx={{height:'100px', minWidth:"100px"}}>
-                            <CardMedia
-                                    component="img"
-                                    sx={{ width: '65px', marginLeft: 'auto', marginRight: 'auto' }}
-                                    image="../../public/icon_contact.png"
+      {/* Welcome Text */}
+      <Box sx={{ textAlign: "center", marginBottom: "30px" }}>
+  <Typography
+    variant="h3"
+    sx={{
+      color: "#FFD700", // Gold color for contrast
+      fontWeight: "bold", // Bold for emphasis
+      fontSize: "3rem", // Bigger font size
+      letterSpacing: "2px", // Slightly increase letter spacing for elegance
+      textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow for depth
+      "@media (max-width: 600px)": {
+        fontSize: "2rem", // Smaller font size for mobile devices
+      },
+    }}
+  >
+    Hello, {user.username}!
+  </Typography>
+</Box>
 
-                                />
-                                <p sx={{textAlign: 'bottom'}}>Profile</p>
-                            </Item>
-                        </Link>
-                    </Grid2>
-                    <Grid2 size="grow">
-                    <Link to='/events'>
-                            <Item sx={{height:'100px', minWidth:"100px"}}>
-                                <CardMedia
-                                    component="img"
-                                    sx={{ width: '65px', marginLeft: 'auto', marginRight: 'auto' }}
-                                    image="../../public/icon_email.png"
-
-                                />
-                                <p sx={{textAlign: 'bottom'}}>Events</p>
-                            </Item>
-                        </Link>
-                    </Grid2>
-                    <Grid2 size="grow">
-                    <Link to='/faq'>
-                            <Item sx={{height:'100px', minWidth:"100px"}}>
-                                <CardMedia
-                                    component="img"
-                                    sx={{ width: '65px', marginLeft: 'auto', marginRight: 'auto' }}
-                                    image="../../public/icon_faq.png"
-
-                                />
-                                <p sx={{textAlign: 'bottom'}}>FAQ</p>
-                            </Item>
-                        </Link>
-                    </Grid2>
-                </Grid2>
-            </Box>
-    )
+      {/* Animated Tiles */}
+      <Box sx={{ width: "90%", margin: "0 auto" }}>
+        <Grid container spacing={4} justifyContent="center">
+          {tiles.map((tile) => (
+            <Grid item xs={12} sm={6} md={4} key={tile.id}>
+              <Link to={tile.link} style={{ textDecoration: "none" }}>
+                <Tile>
+                  <CardMedia
+                    component="img"
+                    image={`../../public/${tile.icon}`}
+                    alt={tile.title}
+                    sx={{
+                      width: "60px",
+                      margin: "0 auto 15px",
+                    }}
+                  />
+                  <Typography variant="h6">{tile.title}</Typography>
+                </Tile>
+              </Link>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+    </Background>
+  );
 }
 
-export default Home
+export default Home;

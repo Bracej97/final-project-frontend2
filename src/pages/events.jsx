@@ -4,7 +4,7 @@ import { fetchEvents } from '../events/EventsAPI.js';
 import { EventsList } from '../events/EventsList.js';
 import {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Link} from 'react-router-dom';
-import { List, Typography } from "@mui/material";
+import { List, Typography, Card, CardContent, CardActions, Button } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import api from '../api/axios';
 
@@ -14,6 +14,7 @@ function Events() {
     useEffect(() => {
         const getAllEvents = async () => {
             const response = await api.get('EventAPI/')
+            console.log(response)
             setEvents(response.data.data)
 
             return Events;
@@ -21,7 +22,7 @@ function Events() {
         getAllEvents()
     }, []);
 
-    console.log(Events);
+    console.log(events);
 
     return (
         <div>
@@ -38,7 +39,39 @@ function Events() {
             </select>
         </div>
         <div id="events-container">
-            
+            <div style={{
+                    width: '100%',
+                    display: 'flex',
+                    flex: 1,
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-evenly',
+                    alignSelf: 'stretch',
+                    gap: '10px',
+                    marginTop: '10px'
+                }}>
+                    {events.map((event) => (
+                        <Card sx={{ maxWidth: 345, minWidth: 300, backgroundColor: '#444444'}} key={event.id}>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div" sx={{ color: '#ffffff' }}>
+                                    {event.event_name}
+                                </Typography>
+                                <Typography variant="body1" sx={{ color: '#ffffff' }}>
+                                    {event.event_description}
+                                </Typography>
+                                <Typography variant="body2" sx={{ color: '#ffffff' }}>
+                                    Date: {event.event_date}
+                                </Typography>
+                                <Typography variant="body2" sx={{ color: '#ffffff' }}>
+                                    Time: {event.event_start} - {event.event_end}
+                                </Typography>
+                            </CardContent>
+                            <CardActions style={{justifyContent: 'center'}}>
+                                <Button size="small" variant="contained"><Link to={`/get/${event.id}`} style={{ color: '#222222' }}>View event</Link></Button>
+                            </CardActions>
+                        </Card>
+                    ))}
+                </div>
         </div>
     </div>
 
