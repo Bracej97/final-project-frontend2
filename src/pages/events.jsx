@@ -2,8 +2,50 @@
 import React from "react";
 import { fetchEvents } from '../events/EventsAPI.js';
 import { EventsList } from '../events/EventsList.js';
+import {useState, useEffect} from 'react';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+import { List, Typography } from "@mui/material";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import api from '../api/axios';
 
 function Events() {
+    const [events, setEvents] = useState([])
+
+    useEffect(() => {
+        const getAllEvents = async () => {
+            const response = await api.get('EventAPI/')
+            setEvents(response.data.data)
+
+            return Events;
+        }
+        getAllEvents()
+    }, []);
+
+    console.log(Events);
+
+    return (
+        <div>
+
+    <div id="events-page">
+        <h1>Explore Events</h1>
+        <div className="controls">
+            <input type="text" id="search-events" placeholder="Search events..." />
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="academic">Academic</option>
+                <option value="social">Social</option>
+                <option value="sports">Sports</option>
+            </select>
+        </div>
+        <div id="events-container">
+            
+        </div>
+    </div>
+
+        </div>
+    )
+
+
     const EventsPage = async () => {
         const eventsContainer = document.getElementById('events-container');
         const searchInput = document.getElementById('search-events');
