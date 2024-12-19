@@ -13,16 +13,16 @@ function FAQS(){
     const [list, setList] = useState([])
 
     useEffect(() => {
-    const getAllFAQ = async () => { 
+    const getAllFAQ = async () => {
         const response = await api.get('FAQAPI/')
         setList(response.data.data)
- 
- 
+
+
         return list;
     }
     getAllFAQ()
 }, []);
-    
+
 
     //useEffect(() => {
     //    fetch('https://675d722063b05ed07977e472.mockapi.io/faq').then(

@@ -52,7 +52,7 @@ function Login() {
                     <Box
                         component="img"
                         sx={{
-                        height: 64
+                        height: 100
                         }}
                         alt="Your logo."
                         src={Banner}

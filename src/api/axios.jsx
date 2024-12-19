@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://mysite-fr3d.onrender.com',
+    baseURL: 'https://mysite-fr3d.onrender.com/',
 });
 
 api.interceptors.request.use(
