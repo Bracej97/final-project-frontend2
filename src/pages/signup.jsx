@@ -24,9 +24,9 @@ function Signup() {
         try {
             const signupRes = await api.post('AccountAPI/signup', {
                 "username": userName,
+                "email": email,
                 "first_name": firstName,
                 "last_name": lastName,
-                "email": email,
                 "password": password,
                 "password2": password
             });
