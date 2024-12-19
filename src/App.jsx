@@ -51,7 +51,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/event/:id" element={<EventDetails />} />
+          <Route path="/get/:id" element={<EventDetails />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
