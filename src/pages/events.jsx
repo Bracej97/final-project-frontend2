@@ -14,6 +14,7 @@ function Events() {
     useEffect(() => {
         const getAllEvents = async () => {
             const response = await api.get('EventAPI/')
+            console.log(response)
             setEvents(response.data.data)
 
             return Events;

@@ -64,6 +64,7 @@ const tiles = [
 
 function Home() {
   const { user } = useContext(UserContext);
+  console.log(user)
 
   return (
     <Background>
@@ -84,7 +85,7 @@ function Home() {
       },
     }}
   >
-    Hello, {user.first_name}!
+    Hello, {user.username}!
   </Typography>
 </Box>
 

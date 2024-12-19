@@ -8,6 +8,7 @@ import Events from './pages/events'
 import Error from './pages/error'
 import Login from './pages/login'
 import Signup from './pages/signup'
+import EventDetails from './pages/EventDetails'
 import { UserProvider } from './contexts/UserContext'
 import Header from './components/Header'
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/event/:id" element={<EventDetails />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
