@@ -6,6 +6,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActions, Input, Button, Typography } from '@mui/material';
 import Banner from '../../public/Banner.png'
+import { Box } from '@mui/material';
 
 function Signup() {
     const [email, setEmail] = useState('');
