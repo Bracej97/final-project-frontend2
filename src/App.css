@@ -81,6 +81,10 @@ li{
 }
 
 
+.profile-Options{
+  display:flex;
+  flex-direction: row;
+}
 .card-holder{
   display: flex;
   flex-wrap: wrap;
