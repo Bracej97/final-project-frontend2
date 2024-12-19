@@ -80,7 +80,27 @@ li{
   list-style: none;
 }
 
+.Profile{
+  border: black, solid;
+  display:flex;
+  flex-direction: row;
+  gap: 30px;
+  background-color: #B8B6C1;
+}
 
+.profile-Options{
+  display:flex;
+  flex-direction: column;
+  border: black, solid;
+}
+
+.profile-Picture{
+  border: black, solid;
+}
+
+.profile-edit{
+  border:black, solid;
+}
 .card-holder{
   display: flex;
   flex-wrap: wrap;
@@ -94,4 +114,22 @@ li{
 
 .card:hover{
   box-shadow: 10px 10px;
+}
+
+.EditName{
+  visibility: hidden;
+  border-radius: 25px;
+  background-color: #888;
+}
+
+.EditEvents{
+  visibility: hidden;
+  border-radius: 25px;
+  background-color: #888;
+}
+
+.EditPicture{
+  visibility: hidden;
+  border-radius: 25px;
+  background-color: #888;
 }
