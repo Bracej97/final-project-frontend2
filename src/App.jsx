@@ -21,6 +21,7 @@ function App() {
     <UserProvider>
       <Router>
         <Header />
+        <div style= {{ marginTop:"32px" }} />
         <div>
         <Routes>
           <Route path="/" element={<Navigate to="/login" />} />

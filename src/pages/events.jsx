@@ -17,7 +17,7 @@ function Events() {
             console.log(response)
             setEvents(response.data.data)
 
-            return Events;
+            return events;
         }
         getAllEvents()
     }, []);
@@ -57,9 +57,6 @@ function Events() {
                                     {event.event_name}
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: '#ffffff' }}>
-                                    {event.event_description}
-                                </Typography>
-                                <Typography variant="body2" sx={{ color: '#ffffff' }}>
                                     Date: {event.event_date}
                                 </Typography>
                                 <Typography variant="body2" sx={{ color: '#ffffff' }}>
