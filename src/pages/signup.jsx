@@ -30,7 +30,8 @@ function Signup() {
                 "password": password,
                 "password2": password
             });
-            console.log(user)
+            console.log(user);
+            console.log(signupRes.data);
 
             if (signupRes.data.status) {
                 const loginRes = await api.post('AccountAPI/login', {
@@ -50,6 +51,7 @@ function Signup() {
                 setError('Could not sign in. Please try again.')
             }
         } catch (err) {
+            console.error(err);
             setError('Invalid account details. Please try again')
         }
     };

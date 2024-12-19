@@ -13,15 +13,15 @@ function FAQS(){
     const [list, setList] = useState([])
 
     useEffect(() => {
-    const getAllFAQ = async () => {
-        const response = await api.get('FAQAPI/')
-        setList(response.data.data)
+        const getAllFAQ = async () => {
+            const response = await api.get('FAQAPI/')
+            setList(response.data.data)
 
 
-        return list;
-    }
-    getAllFAQ()
-}, []);
+            return list;
+        }
+        getAllFAQ()
+    }, []);
 
 
     //useEffect(() => {
