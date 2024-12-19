@@ -47,7 +47,7 @@ function Login() {
                     flexDirection: 'column',
                     gap: '10px',
                 }}>
-                    <Typography variant='h5' component='div' sx={{color: '#ffffff'}}>
+                    <Typography variant='h5' component='div' sx={{color: '#aaaaaa'}}>
                         Log in!
                     </Typography>
                     <Input
@@ -74,7 +74,7 @@ function Login() {
                     <Button size='small' variant='contained' onClick={onClickLogin} style={{width: '100%'}}>
                         Log in
                     </Button>
-                    <Typography gutterBottom variant='body1' sx={{color: '#ffffff'}}>
+                    <Typography gutterBottom variant='body1' sx={{color: '#aaaaaa'}}>
                         Don't have an account?
                         <Typography
                         as="a"
