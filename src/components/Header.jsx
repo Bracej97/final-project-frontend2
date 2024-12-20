@@ -101,7 +101,7 @@ const Header = () => {
             component="img"
             sx={{
               height: 64,
-              display: { xs: 'none', sm: 'block' },
+              display: { xs: 'block', sm: 'block' },
             }}
             alt="Your logo."
             src={Logo}
@@ -112,21 +112,12 @@ const Header = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' } }}
           >
             Geek School Dashboard
           </Typography>
 
-          {/* Search */}
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+
 
           {/* Profile Menu */}
           <IconButton
