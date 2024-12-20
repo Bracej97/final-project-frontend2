@@ -24,10 +24,10 @@ const Banner = styled(Box)({
     background: "url('../../public/Banner.png') center/cover no-repeat",
     color: "#fff",
     textAlign: "center",
-    padding: "80px 0", // Adjust padding as needed
-    fontSize: "2.5rem", // Font size adjustment for large screens
+    padding: "120px 0", // Adjust padding as needed
+    fontSize: "2.3rem", // Font size adjustment for large screens
     fontWeight: "bold",
-    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)", // Optional shadow for depth
+    //boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)", // Optional shadow for depth
     position: "relative",
     "@media (max-width: 600px)": {
       fontSize: "1.5rem", // Adjust font size for mobile screens
@@ -47,7 +47,7 @@ const Banner = styled(Box)({
 
 // Page background style
 const Background = styled(Box)({
-  background: "linear-gradient(to bottom, #f4f4f4, #eaeaea)", // Light gradient background
+  background: "linear-gradient(to bottom, #ffffff, #ffffff)", // Light gradient background
   minHeight: "100vh",
   padding: "20px 0",
 });
@@ -79,7 +79,7 @@ function Home() {
       fontWeight: "bold", // Bold for emphasis
       fontSize: "3rem", // Bigger font size
       letterSpacing: "2px", // Slightly increase letter spacing for elegance
-      textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow for depth
+      textShadow: "2px 2px 4px #001f3f", // Subtle shadow for depth
       "@media (max-width: 600px)": {
         fontSize: "2rem", // Smaller font size for mobile devices
       },
