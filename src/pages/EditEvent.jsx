@@ -80,7 +80,7 @@ function EditEvent() {
                         src={Banner}
                     />
                     <Typography variant='h5' component='div' sx={{color: '#111111'}}>
-                        Add event
+                        Edit event
                     </Typography>
                     <Input
                         required
@@ -131,8 +131,8 @@ function EditEvent() {
                     gap: '10px',
                 }}>
 
-                    <Button size='small' variant='contained' onClick={onClickUpdate} style={{width: '48%'}}>
-                        Add event
+                    <Button size='small' variant='contained' onClick={onClickUpdate} style={{width: '48%'}} sx={{backgroundColor:"#070734"}}>
+                        Update event
                     </Button>
                     <Link to="/events">
                         <Button size='small' variant='outlined' color='error' style={{width: '48%'}}>

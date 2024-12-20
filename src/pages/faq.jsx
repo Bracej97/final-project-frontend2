@@ -80,7 +80,6 @@ function FAQS() {
                             <Grid2 item xs={3} key={index}>
                                 <Accordion
                                     sx={{
-                                        border: "1px solid #FFD700", // Gold border
                                         borderRadius: "8px",
                                         boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
                                         width: {xs:"250px", md:"28vw"},
@@ -99,10 +98,13 @@ function FAQS() {
                                         id={`panel${index}-header`}
                                         sx={{
                                             backgroundColor: "#070734", // Navy background
-                                            color: "#FFD700", // Gold text
+                                            color: "#ffffff", // Gold text
+                                            display: "flex",
+                                            justifyContent: "center",  // Center content horizontally
+                                            textAlign: "center",       // Center text inside
                                         }}
                                     >
-                                        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                                        <Typography variant="h6" sx={{ fontWeight: "bold", width:"100%", textAlign:"center" }}>
                                             {faq.question}
                                         </Typography>
                                     </AccordionSummary>

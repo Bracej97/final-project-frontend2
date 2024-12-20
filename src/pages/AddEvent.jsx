@@ -108,7 +108,7 @@ function AddEvent() {
                     gap: '10px',
                 }}>
 
-                    <Button size='small' variant='contained' onClick={onClickAdd} style={{width: '48%'}}>
+                    <Button size='small' variant='contained' onClick={onClickAdd} style={{width: '48%'}} sx={{backgroundColor:"#070734"}}>
                         Add event
                     </Button>
                     <Link to="/events">

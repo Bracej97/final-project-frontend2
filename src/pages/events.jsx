@@ -79,7 +79,7 @@ function Events() {
                     </Grid2>
                 )}
             </Box>
-            <Button size="large" variant="contained" sx={{marginTop:"20px"}}><Link to={`./add`} style={{ color: '#222222' }}>Add event</Link></Button>
+            <Button size="large" variant="contained" sx={{marginTop:"20px", backgroundColor:"#070734"}}><Link to={`./add`} style={{ color: '#ffffff' }}>Add event</Link></Button>
         </Box>
 
     )
