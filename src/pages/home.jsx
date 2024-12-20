@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { Grid, Typography, Box, Paper, CardMedia } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import Banner from "../assets/Banner.png"
 
 // Custom styles for Tiles
 const Tile = styled(Paper)(({ theme }) => ({
@@ -21,7 +22,7 @@ const Tile = styled(Paper)(({ theme }) => ({
 
 // Banner container with background image
 const Banner = styled(Box)({
-    background: "url('../../public/Banner.png') center/cover no-repeat",
+    background: "url('../assets/Banner.png') center/cover no-repeat",
     color: "#fff",
     textAlign: "center",
     padding: "170px 0", // Adjust padding as needed
