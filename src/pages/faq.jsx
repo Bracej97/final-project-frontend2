@@ -4,7 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid2, Typography } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import api from '../api/axios';
 
@@ -15,6 +15,7 @@ function FAQS() {
         const getAllFAQ = async () => {
             try {
                 const response = await api.get('FAQAPI/');
+                console.log(response.data)
                 setList(response.data?.data || []); // Safely set the list or an empty array
             } catch (error) {
                 console.error("API Error:", error); // Handle any errors from the API
@@ -31,6 +32,7 @@ function FAQS() {
                 background: "linear-gradient(to bottom, #f4f4f4, #eaeaea)", // Light gradient background
                 minHeight: "100vh", // Full page height
                 padding: "20px",
+                width: "68vw"
             }}
         >
             {/* Header Section */}
@@ -73,14 +75,15 @@ function FAQS() {
                         No FAQs available.
                     </Typography>
                 ) : (
-                    <Grid container spacing={2}>
+                    <Grid2 container spacing={2} justifyContent="center">
                         {list.map((faq, index) => (
-                            <Grid item xs={12} key={index}>
+                            <Grid2 item xs={3} key={index}>
                                 <Accordion
                                     sx={{
                                         border: "1px solid #FFD700", // Gold border
                                         borderRadius: "8px",
                                         boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+                                        width: {xs:"250px", md:"28vw"},
                                         "&:before": {
                                             display: "none", // Remove default outline
                                         },
@@ -113,9 +116,9 @@ function FAQS() {
                                         <Typography>{faq.answer}</Typography>
                                     </AccordionDetails>
                                 </Accordion>
-                            </Grid>
+                            </Grid2>
                         ))}
-                    </Grid>
+                    </Grid2>
                 )}
             </Box>
         </Box>
