@@ -130,14 +130,15 @@ function EditEvent() {
                     flexDirection: 'column',
                     gap: '10px',
                 }}>
+
+                    <Button size='small' variant='contained' onClick={onClickUpdate} style={{width: '48%'}}>
+                        Add event
+                    </Button>
                     <Link to="/events">
                         <Button size='small' variant='outlined' color='error' style={{width: '48%'}}>
                             Cancel
                         </Button>
                     </Link>
-                    <Button size='small' variant='contained' onClick={onClickUpdate} style={{width: '48%'}}>
-                        Add event
-                    </Button>
                 </CardActions>
             </Card>
     )
