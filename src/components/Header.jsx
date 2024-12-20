@@ -16,6 +16,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import PollIcon from '@mui/icons-material/Poll';
 import HelpIcon from '@mui/icons-material/Help';
 import PersonIcon from '@mui/icons-material/Person';
+import HomeIcon from '@mui/icons-material/Home';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
@@ -82,7 +83,7 @@ const Header = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       {/* AppBar */}
-      <AppBar position="fixed" sx={{ backgroundColor: '#1976d2' }}>
+      <AppBar position="fixed" sx={{ backgroundColor: '#070734' }}>
         <Toolbar>
           {/* Menu Button */}
           <IconButton
@@ -96,36 +97,27 @@ const Header = () => {
           </IconButton>
 
           {/* Logo */}
-          <Box
+          <Link to="/home"><Box
             component="img"
             sx={{
               height: 64,
-              display: { xs: 'none', sm: 'block' },
+              display: { xs: 'block', sm: 'block' },
             }}
             alt="Your logo."
             src={Logo}
-          />
+          /></Link>
 
           {/* Title */}
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' } }}
           >
             Geek School Dashboard
           </Typography>
 
-          {/* Search */}
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+
 
           {/* Profile Menu */}
           <IconButton
@@ -170,6 +162,16 @@ const Header = () => {
             Navigation
           </Typography>
           <List>
+            <Link to={'/home'}>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <HomeIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Home" />
+                </ListItemButton>
+              </ListItem>
+            </Link>
             <Link to={'/profile'}>
               <ListItem disablePadding>
                 <ListItemButton>
