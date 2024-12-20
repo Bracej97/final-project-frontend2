@@ -27,17 +27,17 @@ function Events() {
     return (
         <div>
 
-    <div id="events-page">
-        <h1>Explore Events</h1>
-        <div className="controls">
-            <input type="text" id="search-events" placeholder="Search events..." />
-            <select id="category-filter">
-                <option value="all">All Categories</option>
-                <option value="academic">Academic</option>
-                <option value="social">Social</option>
-                <option value="sports">Sports</option>
-            </select>
-        </div>
+        <div id="events-page">
+            <h1>Explore Events</h1>
+            <div className="controls">
+                <input type="text" id="search-events" placeholder="Search events..." />
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="academic">Academic</option>
+                    <option value="social">Social</option>
+                    <option value="sports">Sports</option>
+                </select>
+            </div>
         <div id="events-container">
             <div style={{
                     width: '100%',

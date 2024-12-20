@@ -11,6 +11,7 @@ import Signup from './pages/signup'
 import EventDetails from './pages/EventDetails'
 import { UserProvider } from './contexts/UserContext'
 import Header from './components/Header'
+import AddEvent from './pages/AddEvent'
 
 
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/get/:id" element={<EventDetails />} />
+          <Route path="/events/add" element={<AddEvent />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
