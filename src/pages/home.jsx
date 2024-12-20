@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { Grid, Typography, Box, Paper, CardMedia } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Banner2 from "../assets/Banner.png"
 
 // Custom styles for Tiles
 const Tile = styled(Paper)(({ theme }) => ({
@@ -22,7 +21,7 @@ const Tile = styled(Paper)(({ theme }) => ({
 
 // Banner container with background image
 const Banner = styled(Box)({
-    background: "url('../assets/Banner.png') center/cover no-repeat",
+    background: "url('../../public/Banner.png') center/cover no-repeat",
     color: "#fff",
     textAlign: "center",
     padding: "170px 0", // Adjust padding as needed
@@ -55,12 +54,12 @@ const Background = styled(Box)({
 
 // Tile data
 const tiles = [
-  { id: 1, title: "Profile (coming soon)", icon: "../assets/icon_contact.png", link: "/profile" },
-  { id: 2, title: "Events", icon: "../assets/icon_event.png", link: "/events" },
-  { id: 3, title: "FAQ", icon: "../assets/icon_faq.png", link: "/faq" },
-  { id: 4, title: "Settings (coming soon)", icon: "../assets/icon_settings.png", link: "/settings" },
-  { id: 5, title: "Quick Poll (coming soon)", icon: "../assets/icon_quick polls.png", link: "/quickpolls" },
-  { id: 6, title: "Support (coming soon)", icon: "../assets/icon_email.png", link: "/support" },
+  { id: 1, title: "Profile (coming soon)", icon: "icon_contact.png", link: "/profile" },
+  { id: 2, title: "Events", icon: "icon_event.png", link: "/events" },
+  { id: 3, title: "FAQ", icon: "icon_faq.png", link: "/faq" },
+  { id: 4, title: "Settings (coming soon)", icon: "icon_settings.png", link: "/settings" },
+  { id: 5, title: "Quick Poll (coming soon)", icon: "icon_quick polls.png", link: "/quickpolls" },
+  { id: 6, title: "Support (coming soon)", icon: "icon_email.png", link: "/support" },
 ];
 
 function Home() {
