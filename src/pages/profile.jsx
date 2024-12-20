@@ -6,7 +6,7 @@ import { fetchEvents } from '../events/EventsAPI.js';
 import { EventsList } from '../events/EventsList.js';
 import profilePic from '../assets/SBC24-Final-project-blank-profile-pic.png';
 import api from '../api/axios';
-//change first name last name 
+//change first name last name
 function Profile(){
     //Can delete the Edit profile options if too difficult
     //Randomly generated data, delete when ↓ finished
@@ -22,8 +22,8 @@ function Profile(){
     const { user } = useContext(UserContext)
     const [list, setList] =  useState([])
     const [name, setName] = useState([])
-    
-    //Will definitely have to change this to fit API ↓, 
+
+    //Will definitely have to change this to fit API ↓,
     useEffect(() => {
         const getAllEvents = async () => {
             const responseEvent = await api.get('EventAPI/')
@@ -34,8 +34,8 @@ function Profile(){
         getAllEvents()
     }, []);
 
-    //Will also have to update this, depending on if events are stored in UserContext, probably dont need the 
-    //above useEffect. If so can change this to 'list' and change lines 52 and 54 to fit. 
+    //Will also have to update this, depending on if events are stored in UserContext, probably dont need the
+    //above useEffect. If so can change this to 'list' and change lines 52 and 54 to fit.
     useEffect(() => {
         const getUserData = async () => {
             const responseUser = await api.get('AccountAPI')
@@ -74,7 +74,7 @@ function Profile(){
                         {listClasses.map((list) =>
                         <li>
                             What?: {list.event}, When?: {list.time}, Where?: {list.location}
-                        </li> 
+                        </li>
                         )}
                         <ul>
 
@@ -97,13 +97,13 @@ function Profile(){
                     <input type="text"></input>
                 </div>
                 <div className="EditPicture">
-                    
+
                 </div>
                 <div className="EditEvents">
-                    
+
                 </div>
             </div>
-            
+
 
 
         </>

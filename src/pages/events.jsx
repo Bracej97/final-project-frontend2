@@ -39,7 +39,7 @@ function Events() {
                     textAlign: "center",
                     marginBottom: "30px",
                     padding: "20px",
-                    background: "#001f3f", // Navy background
+                    background: "#070734", // Navy background
                     color: "#FFD700", // Gold text
                     borderRadius: "8px",
                     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
@@ -64,21 +64,15 @@ function Events() {
                 ) : (
                     <Grid2 container spacing={2} justifyContent="center">
                         {events.map((event) => (
-                            <Card sx={{ maxWidth: 345, minWidth: 300, backgroundColor: '#444444'}} key={event.id}>
+                            <Card sx={{ maxWidth: 345, minWidth: 300, backgroundColor: '#070734'}} key={event.id}>
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div" sx={{ color: '#ffffff' }}>
                                         {event.event_name}
                                     </Typography>
-                                    <Typography variant="body1" sx={{ color: '#ffffff' }}>
-                                        Date: {event.event_date}
-                                    </Typography>
-                                    <Typography variant="body2" sx={{ color: '#ffffff' }}>
-                                        Time: {event.event_start} - {event.event_end}
-                                    </Typography>
                                 </CardContent>
                                 <CardActions style={{justifyContent: 'center'}}>
-                                    <Button size="small" variant="outlined"><Link to={`./update/${event.id}`} style={{ color: '#ffffff' }}>Edit event</Link></Button>
-                                    <Button size="small" variant="contained"><Link to={`./get/${event.id}`} style={{ color: '#222222' }}>View event</Link></Button>
+                                    <Button size="small" variant="outlined" style={{borderColor:"#FFD700"}}><Link to={`./update/${event.id}`} style={{ color: '#ffffff' }}>Edit event</Link></Button>
+                                    <Button size="small" variant="contained" style={{backgroundColor:"#FFD700"}}><Link to={`./get/${event.id}`} style={{ color: '#222222' }}>Event details</Link></Button>
                                 </CardActions>
                             </Card>
                         ))}

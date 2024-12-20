@@ -20,7 +20,7 @@ function EventDetails() {
     console.log(event);
 
     return(
-        <Card sx={{ maxWidth: 345, minWidth: 300, backgroundColor: '#444444'}} key={event.id}>
+        <Card sx={{ maxWidth: 345, minWidth: 300, backgroundColor: '#070734'}} key={event.id}>
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" sx={{ color: '#ffffff' }}>
                     {event.event_name}
@@ -35,6 +35,13 @@ function EventDetails() {
                     Time: {event.event_start} - {event.event_end}
                 </Typography>
             </CardContent>
+            <CardActions style={{justifyContent: 'center'}}>
+                <Link to="/events">
+                    <Button size='small' variant='outlined' color='error' style={{width: '48%'}}>
+                        Back
+                    </Button>
+                </Link>
+            </CardActions>
         </Card>
     )
 }

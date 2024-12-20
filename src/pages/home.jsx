@@ -6,7 +6,7 @@ import { styled } from "@mui/material/styles";
 
 // Custom styles for Tiles
 const Tile = styled(Paper)(({ theme }) => ({
-  backgroundColor: "#001f3f", // Navy Blue
+  backgroundColor: "#0f1a4a", // Navy Blue
   color: "#FFD700", // Gold
   textAlign: "center",
   padding: theme.spacing(3),
@@ -24,7 +24,7 @@ const Banner = styled(Box)({
     background: "url('../../public/Banner.png') center/cover no-repeat",
     color: "#fff",
     textAlign: "center",
-    padding: "120px 0", // Adjust padding as needed
+    padding: "170px 0", // Adjust padding as needed
     fontSize: "2.3rem", // Font size adjustment for large screens
     fontWeight: "bold",
     //boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.3)", // Optional shadow for depth
@@ -54,12 +54,12 @@ const Background = styled(Box)({
 
 // Tile data
 const tiles = [
-  { id: 1, title: "Profile", icon: "icon_contact.png", link: "/profile" },
+  { id: 1, title: "Profile (coming soon)", icon: "icon_contact.png", link: "/profile" },
   { id: 2, title: "Events", icon: "icon_event.png", link: "/events" },
   { id: 3, title: "FAQ", icon: "icon_faq.png", link: "/faq" },
-  { id: 4, title: "Settings", icon: "icon_settings.png", link: "/settings" },
-  { id: 5, title: "Quick Poll", icon: "icon_quick polls.png", link: "/quickpolls" },
-  { id: 6, title: "Support", icon: "icon_email.png", link: "/support" },
+  { id: 4, title: "Settings (coming soon)", icon: "icon_settings.png", link: "/settings" },
+  { id: 5, title: "Quick Poll (coming soon)", icon: "icon_quick polls.png", link: "/quickpolls" },
+  { id: 6, title: "Support (coming soon)", icon: "icon_email.png", link: "/support" },
 ];
 
 function Home() {

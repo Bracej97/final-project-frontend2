@@ -41,7 +41,7 @@ function FAQS() {
                     textAlign: "center",
                     marginBottom: "30px",
                     padding: "20px",
-                    background: "#001f3f", // Navy background
+                    background: "#070734", // Navy background
                     color: "#FFD700", // Gold text
                     borderRadius: "8px",
                     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
@@ -98,7 +98,7 @@ function FAQS() {
                                         aria-controls={`panel${index}-content`}
                                         id={`panel${index}-header`}
                                         sx={{
-                                            backgroundColor: "#001f3f", // Navy background
+                                            backgroundColor: "#070734", // Navy background
                                             color: "#FFD700", // Gold text
                                         }}
                                     >

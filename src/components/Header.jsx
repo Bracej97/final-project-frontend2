@@ -83,7 +83,7 @@ const Header = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       {/* AppBar */}
-      <AppBar position="fixed" sx={{ backgroundColor: '#1976d2' }}>
+      <AppBar position="fixed" sx={{ backgroundColor: '#070734' }}>
         <Toolbar>
           {/* Menu Button */}
           <IconButton
